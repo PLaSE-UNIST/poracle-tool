@@ -1,3 +1,6 @@
 [submodule "modules/daikon"]
 	path = modules/daikon
 	url = https://github.com/jyi/daikon.git
+[submodule "modules/JQF"]
+	path = modules/JQF
+	url = https://github.com/jyi/JQF.git
