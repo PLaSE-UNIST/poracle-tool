@@ -4,3 +4,6 @@
 [submodule "modules/JQF"]
 	path = modules/JQF
 	url = https://github.com/jyi/JQF.git
+[submodule "modules/pyod"]
+	path = modules/pyod
+	url = https://github.com/yzhao062/pyod.git
