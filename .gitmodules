@@ -7,3 +7,6 @@
 [submodule "modules/pyod"]
 	path = modules/pyod
 	url = https://github.com/yzhao062/pyod.git
+[submodule "modules/junit-quickcheck"]
+	path = modules/junit-quickcheck
+	url = https://github.com/jyi/junit-quickcheck.git
