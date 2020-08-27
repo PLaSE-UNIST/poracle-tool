@@ -10,3 +10,6 @@
 [submodule "modules/junit-quickcheck"]
 	path = modules/junit-quickcheck
 	url = https://github.com/jyi/junit-quickcheck.git
+[submodule "modules/org.aspectj"]
+	path = modules/org.aspectj
+	url = https://github.com/eclipse/org.aspectj.git
