@@ -1,4 +1,4 @@
 export PORACLE_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source $PORACLE_DIR/modules/daikon/activate
 source $PORACLE_DIR/modules/JQF/activate
 source $PORACLE_DIR/modules/junit-quickcheck/activate
+source $PORACLE_DIR/modules/WALA/activate
