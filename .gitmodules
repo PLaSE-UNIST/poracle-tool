@@ -10,3 +10,6 @@
 [submodule "modules/org.aspectj"]
 	path = modules/org.aspectj
 	url = https://github.com/eclipse/org.aspectj.git
+[submodule "modules/WALA"]
+	path = modules/WALA
+	url = https://github.com/somoa-at-unist/WALA.git
