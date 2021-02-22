@@ -13,3 +13,6 @@
 [submodule "modules/WALA"]
 	path = modules/WALA
 	url = https://github.com/somoa-at-unist/WALA.git
+[submodule "modules/gumtree"]
+	path = modules/gumtree
+	url = https://github.com/somoa-at-unist/gumtree.git
