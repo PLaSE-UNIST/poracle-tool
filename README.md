@@ -9,7 +9,7 @@ $ docker run -it [image_name]
 ```
 ## Make the environment
 ```bash
-$ cd /poracle-tool/ source activate
+$ cd /poracle-tool && source activate
 ```
 ## Compile the example
 ```bash
