@@ -7,7 +7,7 @@ $ docker build -t [image_name] .
 ```bash
 $ docker run -it [image_name]
 ```
-## Make the environment
+## Activate the environment
 ```bash
 $ cd /poracle-tool && source activate
 ```
