@@ -15,9 +15,7 @@ RUN bash -c 'locale-gen en_US.UTF-8'
 RUN apt-get -y install python3-pip
 RUN git config --global http.postBuffer 2M
 RUN bash -c 'git clone --recursive https://github.com/PLaSE-UNIST/poracle-tool'
-# RUN echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> ~/.bashrc
 WORKDIR /poracle-tool/
-COPY FakeAnnotatedTypeFactory.java modules/junit-quickcheck/core/src/main/java/com/pholser/junit/quickcheck/internal
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 RUN make
 WORKDIR /poracle-tool/modules/JQF
@@ -30,8 +28,3 @@ RUN cpanm --installdeps .
 RUN ./init.sh
 RUN echo "export PATH=$PATH:/poracle-tool/defects4j/framework/bin" >> ~/.bashrc
 WORKDIR /poracle-tool/modules/JQF
-#SHELL ["/bin/bash", "-c"]
-#RUN ./activate
-#WORKDIR /poracle-tool/modules/junit-quickcheck
-#RUN ./activate
-# CMD /bin/bash activate
