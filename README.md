@@ -21,8 +21,8 @@ $ cd /poracle-tool/modules/JQF/src/test/resources/patches/Patch27/Math2p && defe
 ## Run the fuzzer
 ```bash
 $ cd /poracle-tool/modules/JQF/bin && zest --target org/apache/commons/math3/distribution/AbstractIntegerDistribution.java:138 \
---logdir ./src/test/resources/log --seed 885441 --max-corpus-size 10 \
---max-mutations 200 --duration 10s --exploreDuration 1m --widening-plateau-threshold 50 -o ../src/test/resources/fuzz-results-patch \
+--logdir ./src/test/resources/log --seed 885441 --max-corpus-size 10 --max-mutations 200 --duration 10s \
+--exploreDuration 1m --widening-plateau-threshold 50 -o ../src/test/resources/fuzz-results-patch \
 ../src/test/resources/patches/Patch27/Math2b/target/test-classes:../src/test/resources/patches/Patch27/Math2b/target/classes \
 ../src/test/resources/patches/Patch27/Math2p/target/test-classes:../src/test/resources/patches/Patch27/Math2p/target/classes \
 org.apache.commons.math3.distribution.JQF_HypergeometricDistributionTest testMath1021
