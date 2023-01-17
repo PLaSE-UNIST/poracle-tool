@@ -9,10 +9,7 @@ $ docker run -it [image_name]
 ```
 ## Make the environment
 ```bash
-$ cd /poracle-tool/modules/junit-quickcheck && source activate
-```
-```bash
-$ cd /poracle-tool/modules/JQF && source activate
+$ cd /poracle-tool/ source activate
 ```
 ## Compile the example
 ```bash
