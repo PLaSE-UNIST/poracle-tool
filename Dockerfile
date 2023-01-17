@@ -6,7 +6,7 @@ RUN apt-get update
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get -y install git
 RUN apt-get -y install build-essential 
-RUN apt-get -y install openjdk-11-jdk
+RUN apt-get -y install openjdk-11-jdk openjdk-8-jdk
 RUN apt -y install gnutls-bin
 RUN apt-get -y install cpanminus
 RUN apt-get -y install maven ctags git subversion curl wget unzip global rsync rsyslog
@@ -21,4 +21,17 @@ COPY FakeAnnotatedTypeFactory.java modules/junit-quickcheck/core/src/main/java/c
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 RUN make
 WORKDIR /poracle-tool/modules/JQF
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+RUN mvn package -DskipTests
+WORKDIR /poracle-tool/
+RUN bash -c 'git clone  https://github.com/rjust/defects4j.git'
+WORKDIR defects4j
+RUN cpanm --installdeps .
+RUN ./init.sh
+RUN echo "export PATH=$PATH:/poracle-tool/defects4j/framework/bin" >> ~/.bashrc
+WORKDIR /poracle-tool/modules/JQF
+#SHELL ["/bin/bash", "-c"]
+#RUN ./activate
+#WORKDIR /poracle-tool/modules/junit-quickcheck
+#RUN ./activate
 # CMD /bin/bash activate
